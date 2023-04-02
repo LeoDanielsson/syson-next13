@@ -18,11 +18,11 @@ export default function GasellArticle() {
       </p>
 
       <b>
-        "Syson uppfyller alla högt ställda krav på ett Gasellföretag! Vi på
+        &quot;Syson uppfyller alla högt ställda krav på ett Gasellföretag! Vi på
         Dagens Industri tycker att det gör er till några av Sveriges hjältar. Ni
         har byggt ett av Sveriges snabbast växande och mest lönsamma företag. Ni
         skapar jobb för människor, ni driver tillväxt för Sverige och inspirerar
-        andra att följa i era fotspår”
+        andra att följa i era fotspår.&quot;
       </b>
 
       <p>Vi tackar, vi tackar!</p>

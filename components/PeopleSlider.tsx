@@ -1,7 +1,13 @@
 'use client';
 
 import classNames from 'classnames';
-import { RefObject, useEffect, useRef, useState } from 'react';
+import React, {
+  RefObject,
+  createRef,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 import arrow from '@/icons/arrow.svg';
 import people from '@/peoples';
 import styles from './People.module.css';
@@ -25,13 +31,13 @@ const Link = ({ url, title }: LinkProps) => (
 
 type RefMap = { [key: string]: RefObject<HTMLDivElement> };
 
-export default () => {
+export default function PeopleSlider() {
   const [highlighted, setHighlighted] = useState<string | undefined>();
   const peopleElement = useRef<HTMLDivElement>(null);
   const [shuffledPeople, setShuffledPeople] = useState(people);
 
   const refs: RefMap = people.reduce((refMap, person) => {
-    refMap[person.name] = useRef<HTMLDivElement>(null);
+    refMap[person.name] = createRef<HTMLDivElement>();
     return refMap;
   }, {} as RefMap);
 
@@ -108,4 +114,4 @@ export default () => {
       ))}
     </div>
   );
-};
+}
